@@ -1,0 +1,15 @@
+{
+  "private": true,
+  "scripts": {
+    "postinstall": "dotnet tool restore",
+    "start1": "dotnet fable watch src/App1 --run webpack-dev-server",
+    "start2": "dotnet fable watch src/App2 --run webpack-dev-server",
+    "build": "dotnet fable src/App1 && dotnet fable src/App2 && webpack"
+  },
+  "devDependencies": {
+    "webpack": "^4.46.0",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "version": "1.0.0"
+}
